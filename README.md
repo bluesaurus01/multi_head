@@ -1,7 +1,11 @@
 # What does the multi-head do?
 
-Abstract <br>
+## Abstract <br>
 After the introduction of the Vision Transformer, several methods have been developed that utilize multi- head attention for processing images. However, the role of multi-head attention has not been clarified. In this paper, data is analyzed from the perspective of similarity, attention covering range, and image frequency to understand the role of multi-head. In addition, head masking was performed during the test stage to identify head similarity and the importance of each head. An experiment was recently conducted on the test stage using the Swin Transformer and Vision Transformer as models.
+
+## Introduction
+As Transformers(Vaswani et al., 2017) have shown state of art performance in NLP tasks, it has been applied in image tasks, such as Vision Transformer(Alexey Dosovitskiy., 2021). After Vision Transformer had introduced attention to image tasks, Many researches such as Swin Transformer(Ze Liu., 2021), DeepViT(Daquan Zhou., 2021) have been proposed to overcome the limitations of ViT. Although all techniques use multi-head attrition in common, few researches had been conducted on what role multi-head or attention plays in vision. NLP paper 'Multi-head or Single-head? An Imperial Comparison for Transformer Training'(Liyuan Liu., 2021) studies have shown that multi-head and multi-dimensional single-head eventually show the same performance.
+So what is the role of multi-head? In addition to the performance index, this research was conducted to define the similarity of heads and understand the effect of head masking of each layers, increasing the number of head masked and tracking the score of model. Part 1 discusses how to measure the similarity between attention heads using SVCCA, attention covering range, and image frequency. In Part 2, the significance of heads and layers, as well as the function of heads, was discussed through the concept of head masking. I used Vision Transformer (ViT), and because there are multiple heads (12 layers with 12 heads), I implemented head masking by either masking all heads in each layer, masking heads in the same index across all layers, or masking random heads.
 
 <br>
 This repository includes report of this project and codes for Part 2.
